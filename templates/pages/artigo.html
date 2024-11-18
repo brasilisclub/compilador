@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ page.title }} | Compilador</title>
+<meta name="description" content="{{ page.description }}" />
+<link rel="stylesheet" href="{{ get_url(path='article.css', trailing_slash=false) | safe }}" />
+{% endblock head %}
+
+{% block content %}
+<main>
+    <article>
+        <header class="header">
+            <a href="{{ get_url(path='@/noticias/_index.md') }}" class="button">&larr; Retornar</a>
+            <h1 class="header-title">
+                {{ page.title }}
+            </h1>
+            {% set taxonomy_term = page.taxonomies.assunto | first %}
+            <span>{{ page.extra.longDate}} em <a href="/assunto/{{ taxonomy_term | lower }}">{{ taxonomy_term }}</a></span>
+        </header>
+        {{ page.content | safe }}
+        <footer class="footer">
+            <a class="button" href="#top">Voltar ao topo</a>
+            <a class="button-accent" href="mailto:compilador@brasilis.club?subject={{ page.title }}">Comente por E-mail</a>
+            </div>
+        </footer>
+    </article>
+</main>
+{% endblock content %}

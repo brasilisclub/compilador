@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon-light.ico" crossorigin="anonymous" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="{{ get_url(path='foundations.css', trailing_slash=false) | safe }}" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="URL_da_imagem_default.jpg">
+    <meta property="og:url" content="https://compilador.co">
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="c20dacb4-f840-4d2d-a665-370efe6883c3"></script>
+    {% block head %}{% endblock head %}
+  </head>
+  <body>
+    {% block header %}{% endblock header %}
+    {% block content %}{% endblock content %}
+    {% block footer %}{% endblock footer %}
+    <script src="script.js"></script>
+  </body>
+</html>

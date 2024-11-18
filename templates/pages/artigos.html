@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Últimas Notícias</title>
+<link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
+{% endblock head %}
+
+{% block content %}
+{% include "partials/listing.html" %}
+{% endblock content %}
