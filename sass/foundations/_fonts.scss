@@ -57,13 +57,3 @@ a {
   font-size: var(--font-size-20);
   font-family: var(--font-sans-serif);
 }
-
-a {
-  text-decoration: none;
-  color: var(--label-accent);
-}
-
-a:hover,
-a:focus {
-  color: var(--label-accent-hover);
-}
