@@ -1,5 +1,9 @@
+main {
+  width: 80%;
+  margin: auto;
+}
+
 .title {
-  margin: 0;
   font-size: var(--font-size-64);
 }
 
@@ -8,7 +12,7 @@
   list-style-type: none;
 }
 
-.list-item + .list-item {
+.list-item+.list-item {
   margin-top: 1rem;
 }
 
