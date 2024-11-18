@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% block head %}
 <title>Compilador</title>
-
 <meta name="description" content="Em Compilador, você encontra uma análise crítica sobre as inovações que impactam o nosso cotidiano. Tecnologia para humanos, sem pressa, com reflexão e profundidade.">
 <meta name="keywords" content="tecnologia para humanos, análise crítica, inovação, reflexões sobre tecnologia, transformação digital, gadgets, impacto digital">
-
+<link rel="stylesheet" href="{{ get_url(path='index.css', trailing_slash=false) | safe }}"  /> 
+<!-- Page title and description -->
 <meta property="og:title" content="Compilador">
 <meta property="og:description" content="Em Compilador, você encontra uma análise crítica sobre as inovações que impactam o nosso cotidiano. Tecnologia para humanos, sem pressa, com reflexão e profundidade.">
-
-<link rel="stylesheet" href="{{ get_url(path='index.css', trailing_slash=false) | safe }}"  /> 
-
+<!-- Application Schema -->
 <script type="application/ld+json">
   {
       "@context": "https://schema.org",
