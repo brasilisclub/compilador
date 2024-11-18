@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-<title>Últimas Notícias</title>
+<title>{{ section.title }}</title>
 <link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
 {% endblock head %}
 
