@@ -16,29 +16,12 @@
   </head>
   <body>
     <main>
-      {% block header %}
-      <header class="header">
-        <a class="header-logo" href="/">Compilador</a>
-        <nav class="header-nav" aria-label="Menu de navegação principal">
-          <a href="">Pesquisar</a>
-          <!-- <a href="/newsletter">Newsletter</a> -->
-          <a href="/sobre">Sobre</a> 
-          <!-- <a href="/apoie">Apoie</a> -->
-        </nav>
-      </header>
+      {% block header %} 
+        {% include "partials/header.html" %}
       {% endblock header %}
       {% block content %}{% endblock content %}
-      {% block footer %}
-      <footer class="footer">
-        <div>
-          <p class="footer-text">Compilador</p>
-          <p class="footer-text">Tecnologia para <b>Humanos</b></p>
-        </div>
-        <div>
-          {% include "partials/social.html" %}
-          {% include "partials/license.html" %}
-        </div>
-      </footer>
+      {% block footer %} 
+        {% include "partials/footer.html" %}
       {% endblock footer %}
     </main>
   </body>

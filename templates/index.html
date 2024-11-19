@@ -36,21 +36,26 @@
 </script>
 {% endblock head %}
 {% block content %}
-  <section class="listing-posts">
-    <ol class="list" aria-label="Lista de posts">
-    {% for content_section in section.subsections %}
-    {% set blog_section = get_section(path=content_section) %}
-      {% for page in blog_section.pages %}
-      <li class="list-item">
-        <span class="list-item-date" aria-label="Data do post: {{ page.title }}">{{ page.date }}</span>
-        <h1 class="list-item-title"><a href="{{ page.permalink | safe }}">{{ page.title}}</a></h1>
-        <div>
-          {{ page.summary | safe }}
-        </div>
-        <a href="{{ page.permalink | safe }}">Leia mais...</a>
-      </li>
-      {% endfor %}
+<section class="listing-posts">
+  <ol class="list" aria-label="Lista de posts">
+    {% for page in paginator.pages %}
+    <li class="list-item">
+      <span class="list-item-date" aria-label="Data do post: {{ page.title }}">{{ page.date }}</span>
+      <h1 class="list-item-title"><a href="{{ page.permalink | safe }}">{{ page.title}}</a></h1>
+      <div>
+        {{ page.summary | safe }}
+      </div>
+      <a href="{{ page.permalink | safe }}">Leia mais...</a>
+    </li>
     {% endfor %}
-    </ol>
-  </section>
+  </ol>
+  <nav class="pagination">
+    {% if paginator.previous %}
+    <a class="previous" href="{{ paginator.previous }}">Publicações mais recentes</a>
+    {% endif %}
+    {% if paginator.next %}
+    <a class="next" href="{{ paginator.next }}">Publicações mais antigas</a>
+    {% endif %}
+  </nav>
+</section>
 {% endblock content %}
