@@ -4,7 +4,7 @@ authors = ["Thiago Campos"]
 title = "Bluesky atinge 15 milhões de usuários"
 description = "Rede social atinge marca importante após receber nova leva de usuários do X." 
 [taxonomies]
-assunto = ["Noticia"]
+assunto = ["Noticias"]
 [extra]
 longDate = "10 de Março, 2024"
 +++

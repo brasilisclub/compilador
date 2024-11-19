@@ -1,7 +1,6 @@
 +++
-title = "Notícias"
 sort_by = "date"
+paginate_by = 10
 generate_feeds = true
-template = "pages/listing-posts.html"
 page_template = "pages/post.html"
 +++
