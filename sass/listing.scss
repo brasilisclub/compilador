@@ -1,19 +1,31 @@
-main {
-  width: 80%;
-  margin: auto;
-}
-
 .title {
-  font-size: var(--font-size-64);
+  font-size: var(--font-size-48);
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   padding-left: 0;
   list-style-type: none;
 }
 
-.list-item+.list-item {
-  margin-top: 1rem;
+.list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item-date {
+  font-size: var(--font-size-16);
+}
+
+.list-item-title {
+  margin: .25em 0 .25em 0;
+}
+
+.list-item-title>a {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-32);
 }
 
 @media screen and (max-width: 768px) {

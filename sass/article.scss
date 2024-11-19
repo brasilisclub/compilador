@@ -1,8 +1,3 @@
-main {
-  width: 80%;
-  margin: auto;
-}
-
 .title {
   font-size: var(--font-size-64);
 }
@@ -29,10 +24,6 @@ h4 {
 }
 
 @media screen and (max-width: 748px) {
-  main {
-    width: 100%;
-  }
-
   .footer {
     flex-direction: column;
   }

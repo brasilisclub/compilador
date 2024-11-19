@@ -6,5 +6,9 @@
 {% endblock head %}
 
 {% block content %}
-{% include "partials/listing.html" %}
+<main aria-label="Listagem de postagens de {{ section.title }}"> 
+  <a href="/" class="button" aria-label="Retornar para a página inicial">&larr; Retornar</a>
+  <h1 class="title">{{ section.title }}</h1>
+  {% include "partials/listing.html" %}
+</main>
 {% endblock content %}

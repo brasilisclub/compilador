@@ -4,6 +4,7 @@
 <meta name="description" content="Em Compilador, você encontra uma análise crítica sobre as inovações que impactam o nosso cotidiano. Tecnologia para humanos, sem pressa, com reflexão e profundidade.">
 <meta name="keywords" content="tecnologia para humanos, análise crítica, inovação, reflexões sobre tecnologia, transformação digital, gadgets, impacto digital">
 <link rel="stylesheet" href="{{ get_url(path='index.css', trailing_slash=false) | safe }}"  /> 
+<link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
 <!-- Page title and description -->
 <meta property="og:title" content="Compilador">
 <meta property="og:description" content="Em Compilador, você encontra uma análise crítica sobre as inovações que impactam o nosso cotidiano. Tecnologia para humanos, sem pressa, com reflexão e profundidade.">
@@ -40,23 +41,27 @@
     <p class="header-logo">Compilador</p>
     <nav class="header-nav" aria-label="Menu de navegação principal">
       <a href="/escritos">Pesquisar</a>
-      <a href="/escritos">Newsletter</a>
-      <a href="/escritos">Sobre</a>
-      <a href="/liricos">Apoie</a>
+      <!-- <a href="/escritos">Newsletter</a> -->
+      <a href="/escritos">Sobre</a> 
+      <!-- <a href="/apoie">Apoie</a> -->
     </nav>
   </header>
   <section class="posts">
+    <ol class="list" aria-label="Lista de posts">
     {% for content_section in section.subsections %}
-      {% set blog_section = get_section(path=content_section) %}
-        {% for page in blog_section.pages %}
-          <div>
-            <span class="list-item-date" aria-label="Data do post: {{ page.title }}">{{ page.date }}</span>
-            <h1>{{ page.title}}</h1>
-            <p>{{ page.summary | safe }}</p>
-            <a href="{{ page.permalink }}">Leia mais...</a>
-          </div>
-        {% endfor %}
+    {% set blog_section = get_section(path=content_section) %}
+      {% for page in blog_section.pages %}
+      <li class="list-item">
+        <span class="list-item-date" aria-label="Data do post: {{ page.title }}">{{ page.date }}</span>
+        <h1 class="list-item-title"><a href="{{ page.permalink | safe }}">{{ page.title}}</a></h1>
+        <div>
+          {{ page.summary | safe }}
+        </div>
+        <a href="{{ page.permalink | safe }}">Leia mais...</a>
+      </li>
+      {% endfor %}
     {% endfor %}
+    </ol>
   </section>
   <footer class="footer">
     <p class="footer-text">Tecnologia para <b>Humanos</b></p>
