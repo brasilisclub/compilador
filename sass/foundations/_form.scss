@@ -1,4 +1,6 @@
-button, input[type="submit"], .button {
+button,
+input[type="submit"],
+.button {
   display: block;
   transition: .5s;
   width: fit-content;
@@ -9,11 +11,15 @@ button, input[type="submit"], .button {
   background-color: var(--fill-primary-default);
 }
 
-button:hover, input[type="submit"]:hover, .button:hover {
+button:hover,
+input[type="submit"]:hover,
+.button:hover {
   background-color: var(--fill-primary-hover);
 }
 
-button:focus, input[type="submit"]:focus, .button:focus {
+button:focus,
+input[type="submit"]:focus,
+.button:focus {
   background-color: var(--fill-primary-hover);
 }
 
@@ -23,15 +29,20 @@ button:focus, input[type="submit"]:focus, .button:focus {
   background-color: var(--fill-accent-default);
 }
 
-.button-accent:focus, .button-accent:hover {
+.button-accent:focus,
+.button-accent:hover {
   color: var(--label-secondary);
   background-color: var(--fill-accent-hover);
 }
 
 
 @media only screen and (max-width: 768px) {
-  button, input[type="submit"], .button {
+
+  button,
+  input[type="submit"],
+  .button {
     width: inherit;
     text-align: center;
+    box-sizing: border-box;
   }
 }

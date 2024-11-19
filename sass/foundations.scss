@@ -1,1 +1,70 @@
 @import 'foundations/fonts', 'foundations/form', 'foundations/colors', 'foundations/layout';
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  p,
+  a {
+    font-family: var(--font-serif);
+  }
+}
+
+.header a {
+  font-family: var(--font-serif);
+  color: var(--label-primary);
+  text-decoration: none;
+}
+
+.header a:focus,
+.header a:hover {
+  color: var(--label-primary);
+}
+
+.footer-text {
+  font-family: var(--font-serif);
+  margin: 0;
+}
+
+*+.footer-text {
+  margin-top: 1em;
+}
+
+.header-nav,
+.footer-nav {
+  gap: 1rem;
+  display: flex;
+  color: var(--label-accent);
+}
+
+
+main>article,
+main>section {
+  margin: 5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  header,
+  footer {
+    gap: 2rem;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .header-logo {
+    font-size: var(--font-size-32);
+  }
+
+  .header-nav,
+  .footer-nav {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  main>article,
+  main>section {
+    margin: 3rem 0;
+  }
+}

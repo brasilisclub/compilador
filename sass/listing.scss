@@ -3,11 +3,11 @@
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
   gap: 3rem;
+  display: flex;
   padding-left: 0;
   list-style-type: none;
+  flex-direction: column;
 }
 
 .list-item {
@@ -24,12 +24,6 @@
 }
 
 .list-item-title>a {
-  font-family: var(--font-serif);
   font-size: var(--font-size-32);
-}
-
-@media screen and (max-width: 768px) {
-  .list-item-link {
-    display: block;
-  }
+  font-family: var(--font-serif);
 }
