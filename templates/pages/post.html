@@ -1,9 +1,55 @@
 {% extends "base.html" %}
 
 {% block head %}
+<!-- Post -->
 <title>{{ page.title }} | Compilador</title>
 <meta name="description" content="{{ page.description }}" />
+<meta name="date" content="{{ page.date }}" scheme="YYYY-MM-DD">
+<meta name="keywords" content="{% for keyword in page.extra.keywords %}{{keyword}}, {% endfor %}">
 <link rel="stylesheet" href="{{ get_url(path='article.css', trailing_slash=false) | safe }}" />
+<!-- Mastodon -->
+{% for mastodon in page.extra.mastodon %}
+  <meta name="fediverse:creator" content="{{ mastodon }}">
+{% endfor %}
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://news.brasilis.club">
+<meta property="og:image" content="images/social-cover.jpg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ page.permalink }}">
+<!-- Authors -->
+{% for author in page.authors %}
+<meta property="author" content="{{ author }}">
+<meta property="og:author" content="{{ author }}">
+{% endfor %}
+<!-- Schema -->
+<script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "datePublished": "{{ page.date }}",
+      "author": [
+        {% for author in page.authors %}
+        {
+          "@type": "Person",
+          "name": "{{ author }}"
+        },
+        {% endfor %}
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Compilador",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://news.brasilis.club/logo.png"
+        }
+      }
+    }
+</script>
 {% endblock head %}
 
 {% block content %}

@@ -9,6 +9,7 @@ build_search_index = false
 
 # List of systems taxonomies
 taxonomies = [
+  { name = "categoria", feed = true, paginate_by = 10 },
   { name = "assunto", feed = true, paginate_by = 10 }
 ]
 
