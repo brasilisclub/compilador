@@ -1,5 +1,5 @@
 :root {
-  --font-serif: Garamond, ui-serif;
+  --font-serif: Georgia, ui-serif;
   --font-sans-serif: Helvetica, Arial, ui-sans-serif;
 
   --font-size-120: 7.5rem;
@@ -49,11 +49,13 @@ h4,
 h5,
 h6 {
   font-family: var(--font-serif);
+  font-weight: lighter;
 }
 
 p,
 span,
 a {
-  font-size: var(--font-size-20);
-  font-family: var(--font-sans-serif);
+  line-height: 1.6;
+  font-size: var(--font-size-18);
+  font-family: var(--font-serif);
 }

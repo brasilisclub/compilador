@@ -6,8 +6,8 @@ authors = ["Thiago Campos", "Ivan Santiago"]
 title = "Título da Notícia/Artigo"
 description = "Descrição da Notícia/Artigo (Não será visual, mas será usada em Meta Tags)" 
 [taxonomies]
-categoria = ["Noticia/Artigo"]
-assunto = ["Assunto1", "Assunto2"]
+categorias = ["Noticia/Artigo"]
+assuntos = ["Assunto1", "Assunto2"]
 [extra]
 keywords = ["Keyword1", "Keyword2", "Keyword3"]
 mastodon = ["@username.server"]

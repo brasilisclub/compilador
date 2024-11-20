@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Assuntos | Compilador</title>
+<meta name="description" content="Aqui apresenta-se uma lista com todos os assuntos publicados no Compilador" />
+<link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
+{% endblock head %}
+
+{% block content %}
+<section>
+  <h1 class="title">Assuntos</h1>
+  <ol class="list" aria-label="Assuntos">
+    {% for term in terms %}
+    <li>
+      <span>{{ term.page_count }} Arquivo(s)</span>
+      <a href="{{ term.path | safe }}">{{ term.name }}</a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endblock content %}

@@ -9,8 +9,8 @@ build_search_index = false
 
 # List of systems taxonomies
 taxonomies = [
-  { name = "categoria", feed = true, paginate_by = 10 },
-  { name = "assunto", feed = true, paginate_by = 10 }
+  { name = "categorias", feed = true, paginate_by = 10 },
+  { name = "assuntos", feed = true, paginate_by = 10 }
 ]
 
 # RSS Feed

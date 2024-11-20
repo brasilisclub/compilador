@@ -42,7 +42,7 @@
   <ol class="list" aria-label="Lista de posts">
     {% for page in paginator.pages %}
     <li class="list-item">
-      <span class="list-item-date" aria-label="Data do post: {{ page.title }}">{{ page.date }}</span>
+      <span>{{ page.extra.longDate}}</span>
       <h1 class="list-item-title"><a href="{{ page.permalink | safe }}">{{ page.title}}</a></h1>
       <div>
         {{ page.summary | safe }}

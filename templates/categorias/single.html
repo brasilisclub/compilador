@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ term.name }}</title>
+<meta name="description" content="Aqui apresenta-se todas as publicações da categoria {{ term.name }}" />
+<link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
+{% endblock head %}
+
+{% block content %}
+<section>
+  <h1 class="title">{{ term.name }}</h1>
+  <ol class="list" aria-label="{{ term.name }}">
+    {% for page in paginator.pages %}
+    <li class="list-item">
+      <span class="list-item-date" aria-label="Data do post: {{ page.title }}">{{ page.date }}</span>
+      <h1 class="list-item-title"><a href="{{ page.permalink | safe }}">{{ page.title}}</a></h1>
+      <div>
+        {{ page.summary | safe }}
+      </div>
+      <a href="{{ page.permalink | safe }}">Leia mais...</a>
+    </li>
+    {% endfor %}
+  </ol>
+  <nav class="pagination">
+    {% if paginator.previous %}
+    <a class="previous" href="{{ paginator.previous }}">Publicações mais recentes</a>
+    {% endif %}
+    {% if paginator.next %}
+    <a class="next" href="{{ paginator.next }}">Publicações mais antigas</a>
+    {% endif %}
+  </nav>
+</section>
+{% endblock content %}

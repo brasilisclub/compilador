@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block head %}
-<title>Assunto</title>
-<meta name="description" content="Aqui apresenta-se uma lista com todos os assuntos publicados no Compilador" />
+<title>Categorias | Compilador</title>
+<meta name="description" content="Aqui apresenta-se uma lista com todos as categorias de publicações no Compilador" />
 <link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
 {% endblock head %}
 
 {% block content %}
-<section class="flex-column">
-  <h1 class="title">Assuntos</h1>
-  <ol class="list" aria-label="Assuntos">
+<section>
+  <h1 class="title">Categorias</h1>
+  <ol class="list" aria-label="Categorias">
     {% for term in terms %}
     <li>
       <span>{{ term.page_count }} Arquivo(s)</span>
