@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Favicons -->
-    <link rel="icon" href="favicon-light.ico" crossorigin="anonymous" />
+    <link rel="icon" href="{{ get_url(path='favicon-light.ico', trailing_slash=false) | safe }}" crossorigin="anonymous" />
     <!-- Base Stylesheet -->
     <link rel="stylesheet" href="{{ get_url(path='foundations.css', trailing_slash=false) | safe }}" />
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/open-graph.png">
+    <meta property="og:image" content="{{ get_url(path='images/open-graph.png', trailing_slash=false) | safe }}">
     <!-- Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="c20dacb4-f840-4d2d-a665-370efe6883c3"></script>
     {% block head %}{% endblock head %}
