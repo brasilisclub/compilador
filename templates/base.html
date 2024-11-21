@@ -8,7 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Favicons -->
     <link rel="icon" href="favicon-light.ico" crossorigin="anonymous" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Base Stylesheet -->
     <link rel="stylesheet" href="{{ get_url(path='foundations.css', trailing_slash=false) | safe }}" />
     <!-- Analytics -->
@@ -25,5 +24,6 @@
         {% include "partials/footer.html" %}
       {% endblock footer %}
     </main>
+    <script src="{{ get_url(path='script.js', trailing_slash=false) | safe }}"></script>
   </body>
 </html>
