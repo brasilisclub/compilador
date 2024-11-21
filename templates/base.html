@@ -10,6 +10,9 @@
     <link rel="icon" href="favicon-light.ico" crossorigin="anonymous" />
     <!-- Base Stylesheet -->
     <link rel="stylesheet" href="{{ get_url(path='foundations.css', trailing_slash=false) | safe }}" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/open-graph.png">
     <!-- Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="c20dacb4-f840-4d2d-a665-370efe6883c3"></script>
     {% block head %}{% endblock head %}
@@ -17,11 +20,11 @@
   <body>
     <main>
       {% block header %} 
-        {% include "partials/header.html" %}
+      {% include "partials/header.html" %}
       {% endblock header %}
       {% block content %}{% endblock content %}
       {% block footer %} 
-        {% include "partials/footer.html" %}
+      {% include "partials/footer.html" %}
       {% endblock footer %}
     </main>
     <script src="{{ get_url(path='script.js', trailing_slash=false) | safe }}"></script>
