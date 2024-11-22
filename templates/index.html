@@ -2,7 +2,13 @@
 {% block head %}
 <title>Compilador</title>
 <meta name="description" content="Em Compilador, você encontra uma análise crítica sobre as inovações que impactam o nosso cotidiano. Tecnologia para humanos, sem pressa, com reflexão e profundidade.">
-<meta name="keywords" content="tecnologia para humanos, análise crítica, inovação, reflexões sobre tecnologia, transformação digital, gadgets, impacto digital">
+<meta name="canonical" href="https://news.brasilis.club">
+{% if paginator.previous %}
+<meta name="previous" href="https://news.brasilis.club/{{paginator.previous}}">
+{% endif %}
+{% if paginator.next %}
+<meta name="next" href="https://news.brasilis.club/{{paginator.next}}">
+{% endif %}
 <link rel="stylesheet" href="{{ get_url(path='index.css', trailing_slash=false) | safe }}"  /> 
 <link rel="stylesheet" href="{{ get_url(path='listing.css', trailing_slash=false) | safe }}" />
 <!-- Page title and description -->
