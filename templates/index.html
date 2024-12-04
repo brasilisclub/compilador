@@ -51,9 +51,15 @@
       <span>{{ page.extra.longDate}}</span>
       <h1 class="list-item-title"><a href="{{ page.permalink | safe }}">{{ page.title}}</a></h1>
       <div>
-        {{ page.summary | safe }}
+        {% if page.summary %}
+          {{ page.summary | safe }}
+        {% else %}
+          {{ page.content | safe }}
+        {% endif %}
       </div>
-      <a href="{{ page.permalink | safe }}">Leia mais...</a>
+      {% if page.summary %}
+        <a href="{{ page.permalink | safe }}">Leia mais...</a>
+      {% endif %}
     </li>
     {% endfor %}
   </ol>

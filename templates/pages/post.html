@@ -57,9 +57,6 @@
     </h1>
     <span>
       {{ page.extra.longDate}}
-      {% for assunto in page.taxonomies.assuntos %}
-        <a href="/assuntos/{{ assunto | escape }}">#{{ assunto }}</a>
-      {% endfor %}
     </span>
   </div>
   {{ page.content | safe }}
