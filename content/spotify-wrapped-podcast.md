@@ -4,8 +4,8 @@ authors = ["Thiago Campos"]
 title = "Spotify Wrapped ganha podcast feito por IA para resumir a sua retrospectiva"
 description = "Spotify Wrapped ganha recurso que usa inteligência artificial para criar podcasts personalizados, playlists baseadas em hábitos musicais e outras novidades, além das retrospectivas de outros serviços de streaming como Apple Music, YouTube Music e Amazon Music." 
 [taxonomies]
-categorias = ["Noticia"]
-assuntos = ["Spotify"]
+categorias = ["noticias"]
+assuntos = ["spotify"]
 [extra]
 keywords = ["Spotify", "Spotify Wrapped", "Apple Music Replay", "Amazon Music Delivery", "Youtube Music Recap", "Wrapstodon"]
 mastodon = ["@thiagocampos.mastodon.social"]

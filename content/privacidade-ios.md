@@ -5,8 +5,8 @@ authors = ["Thiago Campos"]
 title = "Estado da Privacidade no iOS"
 description = "Descrição da Notícia/Artigo (Não será visual, mas será usada em Meta Tags)" 
 [taxonomies]
-categorias = ["Artigo"]
-assuntos = ["Apple", "Privacidade"]
+categorias = ["artigos"]
+assuntos = ["apple", "privacidade"]
 [extra]
 keywords = ["Apple", "iOS", "iPhone","iPadOS", "Privacidade", "Segurança"]
 mastodon = ["@thigcampos.mastodon.social"]
